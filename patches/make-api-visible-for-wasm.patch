@@ -1,0 +1,13 @@
+diff --git a/include/cpuinfo.h b/include/cpuinfo.h
+index 6eb4b8c..7254afa 100644
+--- a/include/cpuinfo.h
++++ b/include/cpuinfo.h
+@@ -100,6 +100,8 @@
+ #define CPUINFO_ABI __cdecl
+ #elif CPUINFO_ARCH_X86 && defined(__GNUC__)
+ #define CPUINFO_ABI __attribute__((__cdecl__))
++#elif __wasm__
++#define CPUINFO_ABI __attribute__ ((visibility ("default")))
+ #else
+ #define CPUINFO_ABI
+ #endif

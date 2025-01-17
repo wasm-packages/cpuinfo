@@ -1,0 +1,6 @@
+packages:
+
+  - name: cpuinfo
+    version: 8a1772a
+    artifacts:
+      - input: install/lib/libcpuinfo.so
